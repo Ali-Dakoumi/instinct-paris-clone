@@ -1,0 +1,9 @@
+@import "./variables";
+
+.divider {
+  position: absolute;
+  width: 50vw;
+  height: 2px;
+  background-color: var(--border-dark);
+  right: 0;
+}

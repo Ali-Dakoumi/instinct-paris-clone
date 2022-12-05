@@ -1,0 +1,42 @@
+footer {
+  padding-bottom: 50px;
+  padding-top: 300px;
+  display: grid;
+  grid-template-columns: "repeat(10, 1fr)";
+  grid-template-areas: "social time . . . . . . . topp";
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    grid-area: social;
+    a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    h5 {
+      text-transform: uppercase;
+    }
+    h2 {
+      padding-top: 20px;
+    }
+  }
+  .times {
+    grid-area: time;
+    align-self: end;
+    h5 {
+      text-transform: uppercase;
+    }
+  }
+  .top {
+    grid-area: topp;
+    align-self: end;
+    justify-self: end;
+    rotate: 180deg;
+    cursor: pointer;
+    svg {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}

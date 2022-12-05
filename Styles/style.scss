@@ -1,0 +1,155 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./header";
+@import "./contact";
+@import "./drinks";
+@import "./food";
+@import "./footer";
+@import "./menu";
+@import "./typography";
+@import "./link";
+@import "./divider";
+@import "./sections/sectiontwo";
+@import "./sections/sectionthree";
+@import "./sections/sectionfour";
+@import "./sections/sectionfive";
+@import "./sections/sectionsix";
+// @import "./locomotive";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+main {
+  background-color: var(--background-dark);
+}
+
+span.word,
+h1,
+p,
+h2,
+h5,
+a,
+.split {
+  color: var(--text-dark);
+}
+a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.blacklogo {
+  display: none;
+}
+/* =Smooth ScrollBar container */
+// #viewport {
+//   overflow: hidden;
+//   position: fixed;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+// }
+
+.container {
+  max-width: 100vw;
+  margin: 0 40px;
+  @include sm {
+    margin: 0 25px;
+  }
+  @include md {
+    margin: 0 25px;
+  }
+}
+section.hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "title title title fleche";
+  padding-top: 8vh;
+  justify-self: end;
+  @include sm {
+    grid-template-areas: "title title title title";
+  }
+  @include lg {
+    grid-template-areas: "title title title title";
+  }
+  .herotitle {
+    grid-area: title;
+    position: relative;
+    @include sm {
+      padding-top: 100px;
+    }
+    @include md {
+      padding-top: 100px;
+    }
+  }
+  span.m7 {
+    font-weight: 400;
+    grid-area: title;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: #efeded;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 80px;
+    @include sm {
+      font-size: 21px;
+    }
+    @include md {
+      font-size: 2.5rem;
+    }
+  }
+  span.letters {
+    position: relative;
+    display: inline-block;
+    visibility: hidden;
+  }
+  .herotitle .word {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  img.herosvg {
+    width: 80px;
+    height: 80px;
+    grid-area: fleche;
+    justify-self: end;
+    align-self: end;
+    visibility: hidden;
+    @include sm {
+      display: none;
+    }
+    @include lm {
+      display: none;
+    }
+  }
+}
+
+#firstdivider {
+  margin: 3rem 0;
+}
+#lastdivider {
+  margin-top: 3rem;
+}
+.lineParent {
+  overflow: hidden;
+  .lineChildren {
+    transform: translate(0, 100%);
+  }
+}
+
+.path1 {
+  pointer-events: none;
+}

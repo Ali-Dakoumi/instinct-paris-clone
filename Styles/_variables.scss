@@ -1,0 +1,14 @@
+:root {
+  --text-dark: white;
+  --background-dark: black;
+  --border-dark: white;
+  --background-light: white;
+}
+
+.lightmode {
+  --text-dark: black;
+  --background-dark: #efeded;
+  --border-dark: black;
+  --background-light: black;
+  transition: all 5000ms ease-in-out;
+}

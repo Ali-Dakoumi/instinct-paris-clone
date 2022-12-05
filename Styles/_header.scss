@@ -1,0 +1,65 @@
+@import "./breakpoints";
+@import "./variables";
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "...... logo  menu";
+  padding-top: 20px;
+  .logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+    display: grid;
+    img {
+      height: 80px;
+      align-self: end;
+      @include sm {
+        height: 40px;
+      }
+    }
+  }
+  .menu {
+    color: var(--background-light);
+    grid-area: menu;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    .time {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      @include lm {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
+      .line {
+        background-color: var(--background-light);
+        width: 25px;
+        align-self: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-top: var(--background-light) solid 1px;
+        @include lm {
+          display: none;
+        }
+      }
+    }
+    .hamburger {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--background-light);
+      margin-left: 22px;
+      align-self: center;
+      cursor: pointer;
+      @include sm {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

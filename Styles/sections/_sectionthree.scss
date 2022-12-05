@@ -1,0 +1,43 @@
+section.three {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "bistrot nomique ....  ....";
+  padding: 2rem 0;
+  @include sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include md {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .bistrot {
+    grid-area: bistrot;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h1 {
+      font-weight: 400;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+    }
+  }
+  .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nomique {
+    grid-area: nomique;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    h1 {
+      font-weight: 400;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+    }
+  }
+}

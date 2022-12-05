@@ -1,0 +1,205 @@
+section.four {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 1fr 5fr;
+  grid-column-gap: 5vw;
+  grid-row-gap: 15px;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  @include lm {
+    grid-template-rows: 50px 400px 1fr 50px;
+  }
+  @include sm {
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    padding-bottom: 2rem;
+  }
+  @include md {
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  }
+  @include lg {
+    grid-row-gap: 25px;
+  }
+  .bistrot {
+    grid-row: 1/2;
+    grid-column: 1 / span 6;
+    margin-bottom: 35px;
+    @include md {
+      grid-column: 1 / span 16;
+      margin-bottom: 35px;
+    }
+    @include sm {
+      grid-column: 1 / span 16;
+      margin-bottom: 0;
+    }
+    @include lg {
+      grid-column: 1 / span 8;
+    }
+    h2 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 50px;
+      font-weight: 400;
+      text-transform: uppercase;
+      overflow: hidden;
+      @include md {
+        font-size: 30px;
+      }
+      @include sm {
+        font-size: 30px;
+      }
+      .plus {
+        @include md {
+          margin-left: 6vw;
+        }
+      }
+    }
+    span {
+      display: inline-flex;
+    }
+  }
+
+  .bisimg {
+    grid-column: 1 / span 3;
+    grid-row: 2/4;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1.6;
+    @include md {
+      grid-column: 1 / span 8;
+      grid-row: 2/3;
+      // aspect-ratio: 1 / 1.4;
+    }
+    @include sm {
+      grid-column: 1 / span 8;
+      grid-row: 2/3;
+      // aspect-ratio: 1 / 1.4;
+    }
+    @include lg {
+      grid-column: 1 / span 4;
+      grid-row: 2/2;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0;
+      border: none;
+      margin: auto;
+      display: block;
+      width: 0;
+      height: 0;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+  .nomimg {
+    grid-column: 4 / span 3;
+    grid-row: 2/3;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1.6;
+    @include md {
+      grid-column: 9 / span 8;
+      grid-row: 2/3;
+      // aspect-ratio: 1 / 1.4;
+      height: 100%;
+    }
+    @include sm {
+      grid-column: 9 / span 8;
+      grid-row: 2/3;
+      // aspect-ratio: 1 / 1.4;
+      height: 100%;
+    }
+    @include lg {
+      grid-row: 2/3;
+      grid-column: 5 / span 4;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0;
+      border: none;
+      margin: auto;
+      display: block;
+      width: 0;
+      height: 0;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+  .fourtext {
+    grid-row: 2/3;
+    grid-column: 9 / span 3;
+    margin-top: 0;
+    @include md {
+      grid-column: 1 / span 12;
+      grid-row: 3/4;
+      padding-top: 35px;
+    }
+    @include sm {
+      grid-column: 1 / span 14;
+      grid-row: 3/3;
+      padding-top: 35px;
+    }
+    @include lg {
+      grid-column: 9 / span 8;
+      grid-row: 2/4;
+    }
+  }
+  .fourlink {
+    grid-column: 9 / span 3;
+    align-self: end;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: start;
+    justify-content: space-between;
+    a {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      position: relative;
+      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        margin-top: 3px;
+        path {
+          fill: var(--text-dark);
+        }
+      }
+    }
+    @include lg {
+      grid-column: 12 / span 5;
+      grid-row: 2/3;
+    }
+    @include md {
+      grid-column: 1 / 8;
+      grid-row: 4 / span 1;
+      justify-self: start;
+      align-self: end;
+    }
+    @include sm {
+      grid-column: 1 / 12;
+      grid-row: 4 / span 1;
+      justify-self: start;
+      align-self: end;
+    }
+  }
+}

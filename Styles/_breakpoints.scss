@@ -1,0 +1,36 @@
+$sm: 600px;
+$md: 1000px;
+$lg: 1300px;
+$xxl: 1920px;
+
+//For Small
+@mixin sm {
+  @media screen and (max-width: ($sm)) {
+    @content;
+  }
+}
+
+//For medium
+@mixin md {
+  @media (min-width: ($sm)) and (max-width: ($md)) {
+    @content;
+  }
+}
+//For large
+@mixin lg {
+  @media (min-width: ($md)) and (max-width: ($lg)) {
+    @content;
+  }
+}
+//For larg medium
+@mixin lm {
+  @media (min-width: ($sm)) and (max-width: ($lg)) {
+    @content;
+  }
+}
+//For Extra Extra Large
+@mixin xxl {
+  @media (min-width: ($lg)) and (max-width: ($xxl)) {
+    @content;
+  }
+}
